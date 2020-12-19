@@ -6,25 +6,28 @@ import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './member/member.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  {path:'login' , component:LoginComponent},
-  {path:'custumer', component:CustumerComponent},
-  {path:'product' , component:ProductComponent},
-  {path:'navbar' , component:NavbarComponent},
-  {path: 'member', component:MemberComponent},
-
-
-
+  { path: 'login', component: LoginComponent },
+  { path: 'custumer', component: CustumerComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'member', component: MemberComponent },
+  { path: 'register', component: RegisterComponent },
 ];
-
 
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule],
-
-
 })
-export class AppRoutingModule { }
-export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent]
+export class AppRoutingModule {}
+export const routingComponents = [
+  LoginComponent,
+  CustumerComponent,
+  ProductComponent,
+  MemberComponent,
+  NavbarComponent,
+  RegisterComponent,
+];
