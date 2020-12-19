@@ -75,6 +75,6 @@ app.use("/api/custumer", custumer);
 app.use("/api/stat", stat);
 
 app.use("/api/bill", bill);
-app.listen(8000, function () {
-  console.log("listening on port 8000");
+app.listen(3000, function () {
+  console.log("listening on port 3000");
 });

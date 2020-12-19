@@ -9,6 +9,7 @@ import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
+  // { path: '/',redirectTo: '/login' },
   { path: 'login', component: LoginComponent },
   { path: 'custumer', component: CustumerComponent },
   { path: 'product', component: ProductComponent },

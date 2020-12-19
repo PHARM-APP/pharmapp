@@ -5,8 +5,8 @@ import {Product } from '../models/product'
   providedIn: 'root'
 })
 export class ProductService {
-urlApi='http://localhost:8000/api/product'
-url2='http://localhost:8000/api/categorie'
+urlApi='http://localhost:3000/api/product'
+url2='http://localhost:3000/api/categorie'
   constructor(private http: HttpClient) {}
 
   // CRUD 
