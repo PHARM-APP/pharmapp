@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     var user = {
       username: this.username,
       password: this.password,
+      // kjhbfk
     };
     if (this.username.length === 0) {
       alert('username filed can not be empty');
