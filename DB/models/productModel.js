@@ -6,9 +6,11 @@ const productSchema = mongoose.Schema({
     unique: true
   },
   name: String,
-  categorie: { type: mongoose.Schema.Types.ObjectId, ref: "categorie" },
-  brand: { type: mongoose.Schema.Types.ObjectId, ref: "brand" },
+  // categorie: { type: mongoose.Schema.Types.ObjectId, ref: "categorie" },
+  // brand: { type: mongoose.Schema.Types.ObjectId, ref: "brand" },
   price: Number,
+  discount: String,
+  pricewithDiscount:String,
   quantity: Number,
   image: String,
   description: String
