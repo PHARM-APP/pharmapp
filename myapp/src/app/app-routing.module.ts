@@ -7,7 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
-
+import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
 
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
@@ -17,6 +17,8 @@ const routes: Routes = [
   {path:'navbar' , component:NavbarComponent},
   {path: 'member', component:MemberComponent},
   {path: 'register', component:RegisterComponent},
+  {path: 'allproducts', component:DetailsproductsComponent},
+
 
 
 
@@ -33,4 +35,4 @@ const routes: Routes = [
 
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent]
+export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent]
