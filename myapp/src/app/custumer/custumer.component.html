@@ -21,14 +21,24 @@
                 <nav>
                   <ul id="navigation">
                     <li><a href="index.html" routerLink="/navbar">Home</a></li>
-                    <li><a href="article.html" routerLink="/product" >Articles</a></li>
+                    <li>
+                      <a href="article.html" routerLink="/product">Articles</a>
+                    </li>
 
                     <li><a href="statistics.html">statistics</a></li>
                     <li>
                       <a href="add.html">Add</a>
                       <ul class="submenu">
-                        <li><a href="addmembers.html" routerLink="/register">Add members</a></li>
-                        <li><a href="addcusstumers.html" routerLink="/custumer">Add custumers</a></li>
+                        <li>
+                          <a href="addmembers.html" routerLink="/register"
+                            >Add members</a
+                          >
+                        </li>
+                        <li>
+                          <a href="addcusstumers.html" routerLink="/custumer"
+                            >Add custumers</a
+                          >
+                        </li>
                       </ul>
                     </li>
                     <li><a href="bill.html">Bill</a></li>
@@ -172,33 +182,65 @@
   </div>
 </div>
 <br />
-<table class="table table-success">
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>name</th>
-      <th>Genre</th>
-      <th>Date</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Points</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of myArray">
-      <td>{{ item.id }}</td>
-      <td>{{ item.name }}</td>
-      <td>{{ item.genre }}</td>
-      <td>{{ item.date }}</td>
-      <td>{{ item.phone }}</td>
-      <td>{{ item.email }}</td>
-      <td>{{ item.points }}</td>
-      <td>
-        <button (click)="deleteCustumer(item._id)">delete</button>
-      </td>
-    </tr>
 
-    <tr></tr>
-  </tbody>
-</table>
+
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>List Of Custumers</h4>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+            <th><input type="checkbox" id="checkall" /></th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Date</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Points</th>
+            <th>Delete</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of myArray">
+              <td><input type="checkbox" class="checkthis" /></td>
+              <td>{{ item.id }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.genre }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.phone }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.points }}</td>
+              <!-- <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td> -->
+              <td>
+                <p data-placement="top" data-toggle="tooltip" title="Delete">
+                  <button
+                    class="btn btn-danger btn-xs"
+                    data-title="Delete"
+                    data-toggle="modal"
+                    data-target="#delete"
+                    (click)="deleteCustumer(item._id)"
+                  >
+                    <span class="glyphicon glyphicon-trash"></span>
+                  </button>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
