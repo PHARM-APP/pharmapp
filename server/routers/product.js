@@ -55,7 +55,12 @@ router.post("/", upload.single("file"), (req, res, next) => {
     _id: new mongoose.Types.ObjectId(),
     id: req.body.id,
     name: req.body.name,
-    image: nom_file
+    price:req.body.price,
+    discount: req.body.discount,
+    doseInMG: req.body.doseInMG,
+    quantity: req.body.quantity,
+    image: nom_file,
+    description: req.body.description
   });
   product
     .save()
