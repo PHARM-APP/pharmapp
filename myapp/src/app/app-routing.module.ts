@@ -2,12 +2,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { MemberComponent } from './member/member.component';
 import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
 import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
+
 
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
@@ -26,7 +28,6 @@ const routes: Routes = [
 
 ];
 
-
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes), CommonModule],
@@ -36,3 +37,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent]
+=======
+
+
+
