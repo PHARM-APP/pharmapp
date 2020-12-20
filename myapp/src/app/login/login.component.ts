@@ -21,17 +21,17 @@ export class LoginComponent implements OnInit {
     } else {
       this.service.login(this.username, this.password).subscribe((res: any) => {
         console.log(res);
-        if (res.username !== null && res.role === "manager") {
+        if (res.username !== null && res.role === 'manager') {
           console.log(res);
 
           localStorage['username'] = res.username;
           localStorage['password'] = res.password;
 
           this.router.navigate(['/navbar']);
-        } else if (res.role === "register") {
+        } else if (res.role === 'register') {
           this.router.navigate(['/member']);
         } else if (res === null) {
-          alert('invaild email or password')
+          alert('invaild email or password');
         }
       });
     }

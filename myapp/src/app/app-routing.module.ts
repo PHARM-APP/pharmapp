@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { MemberComponent } from './member/member.component';
 import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,6 +12,7 @@ import {DetailsproductsComponent } from './detailsproducts/detailsproducts.compo
 
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
+
   {path:'login' , component:LoginComponent},
   {path:'custumer', component:CustumerComponent},
   {path:'product' , component:ProductComponent},
@@ -32,9 +32,9 @@ const routes: Routes = [
   declarations: [],
   imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule],
-
-
 })
+
+=======
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent]
 =======
