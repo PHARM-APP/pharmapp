@@ -9,8 +9,10 @@ import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
 import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
 
+
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
+
   {path:'login' , component:LoginComponent},
   {path:'custumer', component:CustumerComponent},
   {path:'product' , component:ProductComponent},
@@ -26,13 +28,16 @@ const routes: Routes = [
 
 ];
 
-
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule],
-
-
 })
+
+=======
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent]
+=======
+
+
+
