@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
       this.service=userservice
      }
 addMember(){
+  console.log(this.username)
   if(this.username.length===0){
     alert("username is required")
   }

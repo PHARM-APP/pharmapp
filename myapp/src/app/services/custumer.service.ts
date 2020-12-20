@@ -5,7 +5,7 @@ import {MyInterface } from '../models/my-interface'
   providedIn: 'root'
 })
 export class CustumerService {
-urlApi='http://localhost:8000/api/custumer'
+urlApi='http://localhost:3000/api/custumer'
   constructor(private http: HttpClient) {}
 
   // CRUD 

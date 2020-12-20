@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterService {
   http : HttpClient
-  url = 'http://localhost:8000/api/auth/register'
+  url = 'http://localhost:3000/api/auth/register'
   constructor(httpClient: HttpClient) {
     this.http = httpClient
   }
