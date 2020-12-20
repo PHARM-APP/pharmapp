@@ -2,96 +2,58 @@
 <form>
   <div class="form-group">
     <label for="one1">id : </label>
-    <input [(ngModel)]="myProduct.id"  type="text" id="one1" name="id" placeholder="Enter id ... ">
+    <input [(ngModel)]="id"  type="text" id="one1" name="id" placeholder="Enter id ... ">
   
   </div>
 <div class="form-group">
   <label for="one">Name : </label>
-  <input [(ngModel)]="myProduct.name" type="text" id="one" name="name" placeholder="Enter name ... ">
+  <input [(ngModel)]="name" type="text" id="one" name="name" placeholder="Enter name ... ">
 
 </div>
 <div class="form-group">
   <label for="two"> Price : </label>
-  <input [(ngModel)]="myProduct.price" type="text" id="two" name="name" placeholder="Enter  Genre ... ">
+  <input [(ngModel)]="price" type="text" id="two" name="price" placeholder="Enter Price ... ">
 
 </div>
 <div class="form-group">
   <label for="three"> Discount  :   </label>
-  <input [(ngModel)]="myProduct.discount" type="date" id="three" name="date" placeholder="Enter the Date ... ">
+  <input [(ngModel)]="discount" type="text" id="three" name="discount" placeholder="Enter the discount ... ">
 
 </div>
 <div class="form-group">
   <label for="four">Price with Discount : </label>
-  <input [(ngModel)]="myProduct.PricewithDiscount" type='tel' id="four" name="phone" placeholder="Phone ... ">
+  <input [(ngModel)]="PricewithDiscount" type='text' id="four" name="price" placeholder=" ... ">
 
 </div>
 <div class="form-group">
   <label for="five">DoesInMG : </label>
-  <input [(ngModel)]="myProduct.DoesInMG" type="email" id="five" name="email" placeholder=" email ... ">
+  <input [(ngModel)]="DoesInMG" type="text" id="five" name="doseInMG" placeholder="  ... ">
 </div>
     <div class="form-group">
       <label for="four">Quantity : </label>
-      <input [(ngModel)]="myProduct.quantity" type='tel' id="four" name="phone" placeholder="Phone ... ">
+      <input [(ngModel)]="quantity" type='tel' id="four" name="quantity" placeholder="quantity ... ">
     
     </div>
 <div class="form-group">
   <label for="six">Add image : </label>
-  <input [(ngModel)]="myProduct.image" type="file" id="six" name="points" placeholder="points ... ">
+  <input (change)="onSelectImage($event)" type="file" id="six" name="image" placeholder="image ... ">
 
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
   <label for="six">Category : </label>
   <select  [(ngModel)]="myProduct.categoryid" >
       <option *ngFor='let c of cat' [value]="c.id">{{c.title}}</option>
       </select>
-</div>
+</div> -->
 <div class="form-group">
   <label for="six">Description : </label>
-  <input [(ngModel)]="myProduct.description" type="Number" id="six" name="points" placeholder="points ... ">
+  <input [(ngModel)]="description" type="text" id="six" name="description" placeholder="description... ">
 
 </div><br />
-<button   class='btn'   type="button"> Add</button>
+<button  (click)="addProduct()" class='btn'   type="button"> Add</button>
 
-</form>
+</form> 
 <br />
 
-<table class='table table-success'>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>name</th>
-      <th>price</th>
-      <th>discount</th>
-      <th>pricewithDiscount</th>
-      <th>DoesInMG</th>
-      <th>quantity</th>
-      <th>image</th>
-      <th>categoryid</th>
-      <th>description</th>
 
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of myArray"> 
-      <td>{{item.id}}</td>
-      <td>{{item.name}}</td>
-      <td>{{item.price}}</td>
-      <td>{{item.discount}}</td>
-      <td>{{item.pricewithDiscount}}</td>
-      <td>{{item.quantity}}</td>
-      <td><img src="http://localhost:8000/{{item.image}}"> </td>
-      <td>{{item.categoryid}}</td>
-      <td>{{item.description}}</td>
-
-
-      <td>
-        <button (click)="deleteProduct(item._id)">delete</button>
-        </td>
-        <td>
-         <button (click)="editProduct(item)">Update</button>
-         </td>
-      <tr>
-  </tbody>
-</table>
+  
