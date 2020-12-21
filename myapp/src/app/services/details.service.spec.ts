@@ -1,17 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RegisterService } from './register.service';
+import { DetailsService } from './details.service';
 
-describe('RegisterService', () => {
-  let service: RegisterService;
+describe('DetailsService', () => {
+  let service: DetailsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RegisterService);
+    service = TestBed.inject(DetailsService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
 });
-// sprint 2 
