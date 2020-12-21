@@ -6,7 +6,6 @@ import { MemberComponent } from './member/member.component';
 import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
 import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
 
