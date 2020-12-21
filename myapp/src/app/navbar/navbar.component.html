@@ -21,14 +21,24 @@
                 <nav>
                   <ul id="navigation">
                     <li><a href="index.html" routerLink="/navbar">Home</a></li>
-                    <li><a href="article.html" routerLink="/product" >Articles</a></li>
+                    <li>
+                      <a href="article.html" routerLink="/product">Articles</a>
+                    </li>
 
                     <li><a href="statistics.html">statistics</a></li>
                     <li>
                       <a href="add.html">Add</a>
                       <ul class="submenu">
-                        <li><a href="addmembers.html" routerLink="/register">Add members</a></li>
-                        <li><a href="addcusstumers.html" routerLink="/custumer">Add custumers</a></li>
+                        <li>
+                          <a href="addmembers.html" routerLink="/register"
+                            >Add members</a
+                          >
+                        </li>
+                        <li>
+                          <a href="addcusstumers.html" routerLink="/custumer"
+                            >Add custumers</a
+                          >
+                        </li>
                       </ul>
                     </li>
                     <li><a href="bill.html">Bill</a></li>
@@ -36,7 +46,7 @@
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                <a  class="btn header-btn"  (click)="onlogout()">ADMIN</a>
+                <a class="btn header-btn" (click)="onlogout()">ADMIN</a>
               </div>
             </div>
           </div>
@@ -47,21 +57,44 @@
         </div>
       </div>
     </div>
-    
-    <div class="slider-area position-relative">
-      <div class="slider-active">
-        <!-- Single Slider -->
-        <!-- <div class="single-slider slider-height d-flex align-items-center">
-         
-          
-        </div> -->
-            <!-- Single Slider -->
-            
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-image">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Discount</th>
+                <th scope="col">DoesInMG</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of myArray">
+                <td>
+                  <img
+                    src="assets/uploads/products/{{ item.image }}"
+                    style="max-width: 100px; max-height: 150px"
+                  />
+                </td>
+
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.discount }}</td>
+                <td>{{ item.DoesInMG }}</td>
+                <td>{{ item.quantity }}</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
-    
   </div>
   <!-- Header End -->
 </header>
-
-

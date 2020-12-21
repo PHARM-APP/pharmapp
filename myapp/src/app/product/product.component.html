@@ -143,23 +143,12 @@
                   />
                 </div>
               </div>
+
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
                   <input
                     [(ngModel)]="quantity"
-                    type="tel"
-                    id="four"
-                    name="quantity"
-                    placeholder="quantity"
-                    class="form-control input-sm"
-                  />
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-6 col-md-6">
-                <div class="form-group">
-                  <input
-                    [(ngModel)]="quantity"
-                    type="tel"
+                    type="number"
                     id="four"
                     name="quantity"
                     placeholder="quantity"
@@ -190,7 +179,7 @@
             </div>
 
             <input
-            (click)="addProduct()"
+              (click)="addProduct()"
               type="submit"
               value="Add"
               class="btn btn-info btn-block"
@@ -202,4 +191,3 @@
   </div>
 </div>
 <br />
-
