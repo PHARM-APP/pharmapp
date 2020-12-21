@@ -10,7 +10,7 @@ const productSchema = mongoose.Schema({
   // brand: { type: mongoose.Schema.Types.ObjectId, ref: "brand" },
   price: Number,
   discount: String,
-  pricewithDiscount:String,
+  DoesInMG:String,
   quantity: Number,
   image: String,
   description: String
