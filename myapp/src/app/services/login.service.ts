@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginService {
+
   http: HttpClient
   url= 'http://localhost:3000/api/auth/login'
 
