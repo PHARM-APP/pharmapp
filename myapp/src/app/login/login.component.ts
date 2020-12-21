@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   isLoggedIn = false;
 
   constructor(private router: Router, private service: LoginService) {
-    this.onload()
+    this.onload();
   }
 
   onlogin() {
