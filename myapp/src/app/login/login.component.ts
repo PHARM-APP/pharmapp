@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       this.username = localStorage['username'];
       this.password = localStorage['password'];
-      this.router.navigate(['/login']);
+      this.router.navigate(['/navbar']);
     }
   }
 
