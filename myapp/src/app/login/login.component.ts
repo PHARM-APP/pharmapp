@@ -10,8 +10,12 @@ import { LoginService } from '../services/login.service';
 export class LoginComponent implements OnInit {
   username = '';
   password = '';
+  status = localStorage['login_status'];
+  isLoggedIn = false;
 
-  constructor(private router: Router, private service: LoginService) {}
+  constructor(private router: Router, private service: LoginService) {
+    this.onload();
+  }
 
   onlogin() {
     if (this.username.length == 0) {
@@ -20,15 +24,11 @@ export class LoginComponent implements OnInit {
       alert('password can not be empty');
     } else {
       this.service.login(this.username, this.password).subscribe((res: any) => {
-        console.log(res);
         if (res.username !== null && res.role === 'manager') {
-          console.log(res);
-
-          localStorage['username'] = res.username;
-          localStorage['password'] = res.password;
-
+          localStorage['login_status'] = '1';
           this.router.navigate(['/navbar']);
         } else if (res.role === 'register') {
+          localStorage['login_status'] = '1';
           this.router.navigate(['/member']);
         } else if (res === null) {
           alert('invaild email or password');
@@ -36,6 +36,19 @@ export class LoginComponent implements OnInit {
       });
     }
   }
+
+  onload() {
+    if (this.status === '1') {
+      this.isLoggedIn = true;
+      this.router.navigate(['/navbar']);
+    }
+  }
+
+  // onlogout() {
+  //   this.isLoggedIn = false;
+  //   localStorage['login_status']='0'
+  //   this.router.navigate(['/login']);
+  // }
 
   ngOnInit(): void {}
 }
