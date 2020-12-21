@@ -18,14 +18,14 @@ const multer = require("multer");
 // router.get('/',ProductControle.findproduct)
 
 const DIR = "./myapp/src/assets/uploads/products/";
-var nom_file;
+var name_file;
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, DIR);
   },
   filename: (req, file, cb) => {
     const fileName = file.originalname.toLowerCase().split(" ").join("-");
-    nom_file = fileName;
+    name_file = fileName;
     cb(null, fileName);
   }
 });
@@ -55,10 +55,14 @@ router.post("/", upload.single("file"), (req, res, next) => {
     _id: new mongoose.Types.ObjectId(),
     id: req.body.id,
     name: req.body.name,
-    image: nom_file
+    price: req.body.price,
+    discount: req.body.discount,
+    DoesInMG: req.body.DoesInMG,
+    quantity: req.body.quantity,
+    image: name_file,
+    description: req.body.description
   });
-  product
-    .save()
+  product.save()
     .then((result) => {
       console.log(result);
       res.status(201).json({
@@ -86,9 +90,6 @@ router.route("/").get(function (req, res) {
     res.send(data);
   });
 });
-
-
-
 
 router.route("/:id").get((req, res) => {
   Modelproduct.findById({ _id: req.params.id }).exec(function (err, product) {

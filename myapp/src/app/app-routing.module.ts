@@ -12,6 +12,7 @@ import {DetailsproductsComponent } from './detailsproducts/detailsproducts.compo
 import { FirstPageComponent } from './first-page/first-page.component';
 
 
+
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
 
@@ -36,6 +37,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent, FirstPageComponent,
 ]
+
 
 
 
