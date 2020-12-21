@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-member',
   templateUrl: './member.component.html',
@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn = false;
+
+  constructor(private router: Router) { }
+  onlogout() {
+    this.isLoggedIn = false;
+    localStorage['login_status']='0'
+    this.router.navigate(['/login']);
+  }
 
   ngOnInit(): void {
   }
