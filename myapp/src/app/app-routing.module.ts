@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
+import { FirstPageComponent } from './first-page/first-page.component';
 
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'member', component: MemberComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'first-page', component: FirstPageComponent },
 ];
 
 @NgModule({
@@ -31,4 +33,5 @@ export const routingComponents = [
   MemberComponent,
   NavbarComponent,
   RegisterComponent,
+  FirstPageComponent,
 ];

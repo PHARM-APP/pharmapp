@@ -8,11 +8,13 @@ import {APP_BASE_HREF} from '@angular/common';
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { FirstPageComponent } from './first-page/first-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents],
+    routingComponents,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
