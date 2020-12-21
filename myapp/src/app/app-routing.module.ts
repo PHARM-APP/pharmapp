@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'member', component:MemberComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'allproducts', component:DetailsproductsComponent},
-  { path: 'first-page', component: FirstPageComponent },
+  { path: '', component: FirstPageComponent },
 ];
 
 @NgModule({
