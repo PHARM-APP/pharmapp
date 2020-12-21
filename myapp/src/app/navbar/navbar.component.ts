@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+ 
+  isLoggedIn = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+
+  onlogout() {
+    this.isLoggedIn = false;
+    localStorage['login_status']='0'
+    this.router.navigate(['/login']);
+  }
 
   ngOnInit(): void {
   }
