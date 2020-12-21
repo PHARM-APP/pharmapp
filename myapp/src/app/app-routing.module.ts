@@ -6,10 +6,9 @@ import { MemberComponent } from './member/member.component';
 import { CustumerComponent } from './custumer/custumer.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
 import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
-
+import {ChartComponent} from './chart/chart.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 
 
@@ -24,6 +23,7 @@ const routes: Routes = [
   {path: 'member', component:MemberComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'allproducts', component:DetailsproductsComponent},
+  {path:'chart' , component:ChartComponent},
   { path: '', component: FirstPageComponent },
 ];
 
@@ -36,7 +36,7 @@ const routes: Routes = [
 
 
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent, FirstPageComponent,
+export const routingComponents = [LoginComponent,CustumerComponent,ChartComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent, FirstPageComponent,
 ]
 
 
