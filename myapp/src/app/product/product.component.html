@@ -20,28 +20,28 @@
               <div class="main-menu f-right d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-                    <li><a href="index.html" routerLink="/navbar">Home</a></li>
+                    <li><a  routerLink="/navbar">Home</a></li>
                     <li>
-                      <a href="article.html" routerLink="/product">Articles</a>
+                      <a routerLink="/product">Articles</a>
                     </li>
 
-                    <li><a href="statistics.html">statistics</a></li>
+                    <li><a >statistics</a></li>
                     <li>
-                      <a href="add.html">Add</a>
+                      <a >Add</a>
                       <ul class="submenu">
                         <li>
-                          <a href="addmembers.html" routerLink="/register"
+                          <a  routerLink="/register"
                             >Add members</a
                           >
                         </li>
                         <li>
-                          <a href="addcusstumers.html" routerLink="/custumer"
+                          <a routerLink="/custumer"
                             >Add custumers</a
                           >
                         </li>
                       </ul>
                     </li>
-                    <li><a href="bill.html">Bill</a></li>
+                    <li><a >Bill</a></li>
                   </ul>
                 </nav>
               </div>
@@ -191,3 +191,35 @@
   </div>
 </div>
 <br />
+
+
+
+<div class="col-xl-8 col-lg-7">
+  <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div
+          class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+          <div class="dropdown no-arrow">
+              <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                  aria-labelledby="dropdownMenuLink">
+                  <div class="dropdown-header">Dropdown Header:</div>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+          </div>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+          <div class="chart-area">
+              <canvas id="myAreaChart"></canvas>
+          </div>
+      </div>
+  </div>
+</div>
