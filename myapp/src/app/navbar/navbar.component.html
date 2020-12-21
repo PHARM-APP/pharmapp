@@ -1,3 +1,8 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
 <header>
   <!--? Header Start -->
   <div class="header-area">
@@ -46,7 +51,7 @@
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                <a class="btn header-btn" (click)="onlogout()">ADMIN</a>
+                <a class="btn header-btn" (click)="onlogout()">Log Out</a>
               </div>
             </div>
           </div>
@@ -71,6 +76,8 @@
                 <th scope="col">DoesInMG</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Description</th>
+
+                <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -82,13 +89,28 @@
                   />
                 </td>
 
-                <td>{{ item.id }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.price }}</td>
                 <td>{{ item.discount }}</td>
                 <td>{{ item.DoesInMG }}</td>
                 <td>{{ item.quantity }}</td>
-                <td></td>
+                <td>{{ item.description }}</td>
+                <!-- <td> <a   class="btn btn-primary a-btn-slide-text"
+                  
+                  data-title="Delete"
+                  data-toggle="modal"
+                  data-target="#delete"
+                  (click)="deleteProduct(item._id)"></a></td> -->
+                <td>
+                  <a href="#" class="btn btn-primary a-btn-slide-text">
+                    <span
+                      class="glyphicon glyphicon-remove"
+                      aria-hidden="true"
+                      (click)="deleteProduct(item._id)"
+                    ></span>
+                    <span><strong></strong></span>
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
