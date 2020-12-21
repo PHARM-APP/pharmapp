@@ -13,10 +13,10 @@ router.route("/login").post(function (req, res, next) {
       req.logIn(user, (err) => {
         if (err) throw err;
         res.send(req.user);
-        console.log(req.user);
       });
     }
   })(req, res, next);
+
 });
 
 router.route("/register").post(function (req, res) {
