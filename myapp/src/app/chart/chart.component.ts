@@ -15,7 +15,7 @@ export class ChartComponent implements OnInit {
   public barChartLabels = ['Week1', 'Week2', 'Week3', 'Week4'];
   public barChartType = 'bar';
   public barChartLegend = true;
-  public barChartData = [{ data: this.array, label: 'Seles' }];
+  public barChartData = [{ data: this.array, label: 'Sales' }];
   arr: any = [];
   constructor(private service: ChartService) {}
   allBills() {
