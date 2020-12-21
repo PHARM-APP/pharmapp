@@ -16,6 +16,7 @@ myCustumer:any={
   email:'',
   points:''
 }
+myCondition=false
   constructor(private myVar:CustumerService) { }
 
   ngOnInit():void {
@@ -46,6 +47,33 @@ postCustumer(){
   this.myVar.postitem(this.myCustumer)
   .subscribe((item:any)=>{
     this.myArray=[item, ...this.myArray]
+    this.videInput();
+  })
+}
+videInput(){
+  this.myCustumer={
+    id:'',
+    name:'',
+    genre:'',
+    date:'',
+    phone:'',
+    email:'',
+    points:''
+  }
+}
+// update 
+editCustumer(item:any){
+  this.myCustumer=item;
+  this.myCondition=true;
+}
+
+// update 
+updatemyCustumer(){
+  this.myVar.updateCustumer(this.myCustumer)
+  .subscribe(custumer=>{
+    this.videInput();
+    this.myCondition=false;
+    this.getCustumer()
   })
 }
 
