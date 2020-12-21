@@ -1,0 +1,42 @@
+{
+  "name": "hamo-rbk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PHARM-APP/pharmapp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.6",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.8",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "webpack": "^4.2.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
