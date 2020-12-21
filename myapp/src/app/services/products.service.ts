@@ -15,8 +15,7 @@ urlApi='http://localhost:3000/api/product/'
     name: string,
     price:string,
     discount:string,
-    pricewithDiscount:string,
-    doseInMFG:string,
+    DoesInMG:string,
     quantity:string,
     image:any,
     description:string
@@ -27,8 +26,7 @@ urlApi='http://localhost:3000/api/product/'
   body.append('name',name)
   body.append('price', price)
   body.append('discount', discount)
-  body.append('priceWithDiscount', pricewithDiscount)
-  body.append('doseInMG', doseInMFG)
+  body.append('doseInMG', DoesInMG)
   body.append('quantity', quantity)
   body.append('image', image)
   body.append('description',description)

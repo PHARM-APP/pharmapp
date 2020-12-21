@@ -15,7 +15,6 @@ export class ProductComponent implements OnInit {
   name=""
   price=""
   discount=""
-  PricewithDiscount=""
   DoesInMG=""
   quantity=''
   image= ""
@@ -27,15 +26,21 @@ export class ProductComponent implements OnInit {
   ngOnInit():void {
    
   }
+  onSelectImage(event:any){
+    // console.log(event.target.files[0])
+    // this.image=event.target.files[0].name
+    console.log(event.target.files[0].name)
+   const file=event.target.files[0].name
+   this.image=file
+        // this.image=event.target.name
+
+  }
   addProduct(){
-    this.myVar.addService(this.id,this.name,this.price,this.discount,this.PricewithDiscount,this.DoesInMG,this.quantity,this.image,this.description)
+    this.myVar.addService(this.id,this.name,this.price,this.discount,this.DoesInMG,this.quantity,this.image,this.description)
     .subscribe((res)=>{
       console.log(' product added')
     })
   }
-  onSelectImage(event:any){
-    console.log(event.target.files[0])
-    this.image=event.target.name
-  }
+ 
 }
 

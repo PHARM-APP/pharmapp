@@ -20,14 +20,10 @@
   <input [(ngModel)]="discount" type="text" id="three" name="discount" placeholder="Enter the discount ... ">
 
 </div>
-<div class="form-group">
-  <label for="four">Price with Discount : </label>
-  <input [(ngModel)]="PricewithDiscount" type='text' id="four" name="price" placeholder=" ... ">
 
-</div>
 <div class="form-group">
   <label for="five">DoesInMG : </label>
-  <input [(ngModel)]="DoesInMG" type="text" id="five" name="doseInMG" placeholder="  ... ">
+  <input [(ngModel)]="DoesInMG" type="text" id="five" name="DoesInMG" placeholder="  ... ">
 </div>
     <div class="form-group">
       <label for="four">Quantity : </label>
@@ -39,12 +35,7 @@
   <input (change)="onSelectImage($event)" type="file" id="six" name="image" placeholder="image ... ">
 
 </div>
-<!-- <div class="form-group">
-  <label for="six">Category : </label>
-  <select  [(ngModel)]="myProduct.categoryid" >
-      <option *ngFor='let c of cat' [value]="c.id">{{c.title}}</option>
-      </select>
-</div> -->
+
 <div class="form-group">
   <label for="six">Description : </label>
   <input [(ngModel)]="description" type="text" id="six" name="description" placeholder="description... ">
