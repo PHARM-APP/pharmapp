@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
 
 import { FirstPageComponent } from './first-page/first-page.component';
+import { BillComponent } from './bill/bill.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'member', component:MemberComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'allproducts', component:DetailsproductsComponent},
+  {path: 'bill', component:BillComponent},
   { path: '', component: FirstPageComponent },
 ];
 

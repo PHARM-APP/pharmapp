@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 import { FirstPageComponent } from './first-page/first-page.component';
+import { BillComponent } from './bill/bill.component';
 // import { DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
 // import { DetailsprodComponent } from './services/detailsprod/detailsprod.component';
 // import { Detailsprod } from './services/detailsprod.ts/detailsprod.ts.component';
@@ -19,7 +20,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
   declarations: [
     AppComponent,
     routingComponents,
-
+    BillComponent,
    
 
     // DetailsproductsComponent,
