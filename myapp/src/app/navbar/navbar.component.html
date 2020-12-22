@@ -55,9 +55,7 @@
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-
                 <a class="btn header-btn" (click)="onlogout()">Log Out</a>
-
               </div>
             </div>
           </div>
@@ -68,7 +66,6 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <input
         [(ngModel)]="name"
@@ -96,6 +93,7 @@
                 <th scope="col">Description</th>
 
                 <th scope="col">Delete</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -113,6 +111,7 @@
                 <td>{{ item.DoesInMG }}</td>
                 <td>{{ item.quantity }}</td>
                 <td>{{ item.description }}</td>
+                <td><button (click)="addtocart(item)">sup</button></td>
 
                 <td>
                   <a href="#" class="btn btn-primary a-btn-slide-text">
@@ -128,17 +127,6 @@
             </tbody>
           </table>
         </div>
-
-
-    <div class="slider-area position-relative">
-      <div class="slider-active">
-        <!-- Single Slider -->
-        <!-- <div class="single-slider slider-height d-flex align-items-center">
-         
-          
-        </div> -->
-        <!-- Single Slider -->
-
       </div>
     </div>
   </div>

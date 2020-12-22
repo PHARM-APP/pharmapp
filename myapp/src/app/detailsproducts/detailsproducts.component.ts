@@ -88,33 +88,33 @@ export class DetailsproductsComponent implements OnInit {
     }
 
   }
-  loadAllProducts() {
-    this.service.getAllProducts().subscribe((response: any) => {
-      // if(this.mycondition){
-      //   for(var i=0;i<response.length;i++){
-      //     if(response[i].name==name){
-      //       this.myArray.push(response[i])
-      //       console.log(this.myArray)
+  // loadAllProducts() {
+  //   this.service.getAllProducts().subscribe((response: any) => {
+  //     // if(this.mycondition){
+  //     //   for(var i=0;i<response.length;i++){
+  //     //     if(response[i].name==name){
+  //     //       this.myArray.push(response[i])
+  //     //       console.log(this.myArray)
 
-      //     }
-      //   }
-      // }
-      console.log(response);
-      this.myArray = response;
-      this.filter = response;
-    });
-  }
-  deleteProduct(id: number) {
-    console.log(id);
+  //     //     }
+  //     //   }
+  //     // }
+  //     console.log(response);
+  //     this.myArray = response;
+  //     this.filter = response;
+  //   });
+  // }
+  // deleteProduct(id: number) {
+  //   console.log(id);
 
-    this.service
-      .delete(id)
+  //   this.service
+  //     .delete(id)
 
-      .subscribe(() => {
-        // return this.myArray=this.myArray.filter((item:any)=>item.id !== id)
-        return this.loadAllProducts();
-      });
-  }
+  //     .subscribe(() => {
+  //       // return this.myArray=this.myArray.filter((item:any)=>item.id !== id)
+  //       return this.loadAllProducts();
+  //     });
+  // }
   onChange(event: any) {
     this.filter = this.myArray.filter((item: any) => {
       if (item.name.includes(this.name)) {

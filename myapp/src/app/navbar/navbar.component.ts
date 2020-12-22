@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BillService } from '../services/bill.service';
 import { DetailsService } from '../services/details.service';
 
 @Component({
@@ -11,6 +12,21 @@ export class NavbarComponent implements OnInit {
 
   name = '';
   myArray: any = [];
+  bill: any = {
+    id: '',
+    custumer: '',
+    order: [
+      {
+        id: '',
+        product: '',
+        quantity: '',
+        name: '',
+        price: 0,
+      },
+    ],
+    total: '',
+  };
+
 
   isLoggedIn = false;
   filter: any = [];
@@ -19,7 +35,8 @@ export class NavbarComponent implements OnInit {
   constructor(
     private router: Router,
     productService: DetailsService,
-    private service: DetailsService
+    private service: DetailsService,
+    private billservice: BillService
   ) {
     productService.getproduct().subscribe((res) => {
       this.myArray = res;
@@ -45,6 +62,35 @@ export class NavbarComponent implements OnInit {
       });
   }
 
+  addtocart(item: any) {
+    //console.log(item);
+
+    var product = {
+      id: '',
+      product: item._id,
+      quantity: '1',
+      name: item.name,
+      price: item.price,
+    };
+
+    if (localStorage.getItem('bill_id') === null) {
+      this.bill.order = [];
+      this.bill.order.push(product);
+      this.bill.custumer = localStorage.getItem('_id');
+
+      this.billservice.postitem(this.bill).subscribe((res) => {
+        console.log(res);
+      });
+
+      //localStorage.setItem('bill_id', bill_id);
+    } else {
+      this.bill.custumer = localStorage.getItem('_id');
+      this.bill.order.push(product);
+
+      var bill_id = this.billservice.addproducttocart(this.bill);
+    }
+
+  }
 
   onlogout() {
     this.isLoggedIn = false;
