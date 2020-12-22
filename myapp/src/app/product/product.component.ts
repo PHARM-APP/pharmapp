@@ -27,8 +27,10 @@ export class ProductComponent implements OnInit {
   onSelectImage(event: any) {
     // console.log(event.target.files[0])
     // this.image=event.target.files[0].name
-    console.log(event.target.files[0].name);
+
+
     const file = event.target.files[0];
+
     this.image = file;
     // this.image=event.target.name
   }
@@ -46,6 +48,16 @@ export class ProductComponent implements OnInit {
       )
       .subscribe((res) => {
         console.log(' product added');
+        this.videInput()
       });
+  }
+  videInput() {
+        this.id=''
+        this.name=''
+        this.price=''
+        this.discount=''
+        this.DoesInMG=''
+        this.quantity=''
+        this.image=''
   }
 }

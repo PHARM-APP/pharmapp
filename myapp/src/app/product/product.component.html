@@ -1,88 +1,187 @@
-<h1>Add Product</h1>
-<form>
-  <div class="form-group">
-    <label for="one1">id : </label>
-    <input
-      [(ngModel)]="id"
-      type="text"
-      id="one1"
-      name="id"
-      placeholder="Enter id ... "
-    />
-  </div>
-  <div class="form-group">
-    <label for="one">Name : </label>
-    <input
-      [(ngModel)]="name"
-      type="text"
-      id="one"
-      name="name"
-      placeholder="Enter name ... "
-    />
-  </div>
-  <div class="form-group">
-    <label for="two"> Price : </label>
-    <input
-      [(ngModel)]="price"
-      type="text"
-      id="two"
-      name="price"
-      placeholder="Enter Price ... "
-    />
-  </div>
-  <div class="form-group">
-    <label for="three"> Discount : </label>
-    <input
-      [(ngModel)]="discount"
-      type="text"
-      id="three"
-      name="discount"
-      placeholder="Enter the discount ... "
-    />
+<header>
+  <!--? Header Start -->
+  <div class="header-area">
+    <div class="main-header header-sticky">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-xl-2 col-lg-2 col-md-1">
+            <div class="logo">
+              <a routerLink="/index"
+                ><img src="../../assets/assets/img/logo/logo.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-xl-10 col-lg-10 col-md-10">
+            <div
+              class="menu-main d-flex align-items-center justify-content-end"
+            >
+              <!-- Main-menu -->
+              <div class="main-menu f-right d-none d-lg-block">
+                <nav>
+                  <ul id="navigation">
+                    <li><a routerLink="/navbar">Home</a></li>
+                    <li>
+                      <a routerLink="/product">Articles</a>
+                    </li>
+
+                    <li><a routerLink="/chart">statistics</a></li>
+                    <li>
+                      <a>Add</a>
+                      <ul class="submenu">
+                        <li>
+                          <a routerLink="/register">Add members</a>
+                        </li>
+                        <li>
+                          <a routerLink="/custumer">Add custumers</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a routerLink="/bill">Bill</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <!-- <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none"></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Single Slider -->
   </div>
 
-  <div class="form-group">
-    <label for="five">DoesInMG : </label>
-    <input
-      [(ngModel)]="DoesInMG"
-      type="text"
-      id="five"
-      name="DoesInMG"
-      placeholder="  ... "
-    />
-  </div>
-  <div class="form-group">
-    <label for="four">Quantity : </label>
-    <input
-      [(ngModel)]="quantity"
-      type="tel"
-      id="four"
-      name="quantity"
-      placeholder="quantity ... "
-    />
-  </div>
-  <div class="form-group">
-    <label for="six">Add image : </label>
-    <input
-      (change)="onSelectImage($event)"
-      type="file"
-      id="six"
-      name="image"
-      placeholder="image ... "
-    />
-  </div>
+  <!-- Header End -->
+</header>
 
-  <div class="form-group">
-    <label for="six">Description : </label>
-    <input
-      [(ngModel)]="description"
-      type="text"
-      id="six"
-      name="description"
-      placeholder="description... "
-    />
+<link
+  href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <div class="row centered-form">
+    <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add Product</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="id"
+                    type="text"
+                    id="one1"
+                    name="id"
+                    class="form-control input-sm"
+                    placeholder="id"
+                  />
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="name"
+                    type="text"
+                    id="one"
+                    name="name"
+                    class="form-control input-sm"
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="price"
+                    type="text"
+                    id="two"
+                    name="price"
+                    placeholder="Price"
+                    class="form-control input-sm"
+                  />
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="discount"
+                    type="text"
+                    id="three"
+                    name="discount"
+                    placeholder="discount"
+                    class="form-control input-sm"
+                  />
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="DoesInMG"
+                    type="text"
+                    id="five"
+                    name="DoesInMG"
+                    placeholder=" doesInMG "
+                    class="form-control input-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    [(ngModel)]="quantity"
+                    type="number"
+                    id="four"
+                    name="quantity"
+                    placeholder="quantity"
+                    class="form-control input-sm"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                (change)="onSelectImage($event)"
+                type="file"
+                id="six"
+                name="image"
+                placeholder="image ... "
+                class="form-control input-sm"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                [(ngModel)]="description"
+                type="text"
+                id="six"
+                name="description"
+                placeholder="description... "
+                class="form-control input-sm"
+              />
+            </div>
+
+            <button
+              (click)="addProduct()"
+              value="Add"
+              class="btn btn-info btn-block"
+            >
+              Add Article
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <br />
-  <button (click)="addProduct()" class="btn" type="button">Add</button>
-</form>
+</div>
 <br />

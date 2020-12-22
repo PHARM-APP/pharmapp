@@ -1,3 +1,8 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
 <header>
   <!--? Header Start -->
   <div class="header-area">
@@ -21,22 +26,36 @@
                 <nav>
                   <ul id="navigation">
                     <li><a href="index.html" routerLink="/navbar">Home</a></li>
-                    <li><a href="article.html" routerLink="/product" >Articles</a></li>
+                    <li>
+                      <a href="article.html" routerLink="/product">Articles</a>
+                    </li>
 
-                    <li><a href="statistics.html">statistics</a></li>
+                    <li>
+                      <a href="statistics.html" routerLink="/chart"
+                        >statistics</a
+                      >
+                    </li>
                     <li>
                       <a href="add.html">Add</a>
                       <ul class="submenu">
-                        <li><a href="addmembers.html" routerLink="/register">Add members</a></li>
-                        <li><a href="addcusstumers.html" routerLink="/custumer">Add custumers</a></li>
+                        <li>
+                          <a href="addmembers.html" routerLink="/register"
+                            >Add members</a
+                          >
+                        </li>
+                        <li>
+                          <a href="addcusstumers.html" routerLink="/custumer"
+                            >Add custumers</a
+                          >
+                        </li>
                       </ul>
                     </li>
-                    <li><a href="bill.html">Bill</a></li>
+                    <li><a routerLink="/bill">Bill</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                <a  class="btn header-btn"  (click)="onlogout()">ADMIN</a>
+                <a class="btn header-btn" (click)="onlogout()">Log Out</a>
               </div>
             </div>
           </div>
@@ -47,21 +66,81 @@
         </div>
       </div>
     </div>
-    
-    <div class="slider-area position-relative">
-      <div class="slider-active">
-        <!-- Single Slider -->
-        <!-- <div class="single-slider slider-height d-flex align-items-center">
-         
-          
-        </div> -->
-            <!-- Single Slider -->
-            
-        </div>
+    <div class="container">
+      <input
+        [(ngModel)]="name"
+        class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2"
+        class="form-control form-control-sm mr-3 w-75"
+        type="text"
+        placeholder="Type something to search list products"
+        aria-label="Search"
+        (ngModelChange)="onChange($event)"
+      />
     </div>
-    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-image">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Discount</th>
+                <th scope="col">DoesInMG</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Description</th>
+                <th scope="col">Add to bill</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of filter">
+                <td>
+                  <img
+                    src="assets/uploads/products/{{ item.image }}"
+                    style="max-width: 100px; max-height: 150px"
+                  />
+                </td>
+
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.discount }}</td>
+                <td>{{ item.DoesInMG }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.description }}</td>
+                <!-- <td><button (click)="addtocart(item)">sup</button></td> -->
+
+                <td>
+                  <button
+                    class="btn btn-primary a-btn-slide-text"
+                    (click)="addtocart(item)"
+                  >
+                    <span
+                      class="glyphicon glyphicon-plus"
+                      aria-hidden="true"
+                      (click)="addtocart(item)"
+                    ></span>
+                    <span><strong>Add</strong></span>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-primary a-btn-slide-text">
+                    <span
+                      class="glyphicon glyphicon-remove"
+                      aria-hidden="true"
+                      (click)="deleteProduct(item._id)"
+                    ></span>
+                    <span><strong></strong></span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Header End -->
 </header>
-
-

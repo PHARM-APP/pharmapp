@@ -18,17 +18,20 @@ export class LoginComponent implements OnInit {
   }
 
   onlogin() {
+    console.log(this.username)
     if (this.username.length == 0) {
-      alert('email field can not be empty');
+      alert('username field can not be empty');
     } else if (this.password.length == 0) {
       alert('password can not be empty');
     } else {
       this.service.login(this.username, this.password).subscribe((res: any) => {
         if (res.username !== null && res.role === 'manager') {
           localStorage['login_status'] = '1';
+          localStorage['_id'] = res._id;
           this.router.navigate(['/navbar']);
         } else if (res.role === 'register') {
           localStorage['login_status'] = '1';
+          localStorage['_id'] = res._id;
           this.router.navigate(['/member']);
         } else if (res === null) {
           alert('invaild email or password');
@@ -43,7 +46,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/navbar']);
     }
   }
-
 
   // onlogout() {
   //   this.isLoggedIn = false;
