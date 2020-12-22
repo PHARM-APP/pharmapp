@@ -19,6 +19,9 @@ export class BillService {
   postitem(bill: any) {
     return this.http.post<bill>(this.urlApi, bill);
   }
+  updateitem(bill: any) {
+    return this.http.put(`${this.urlApi}`, bill);
+  }
 
   //methode Post
   addproducttocart(bill: any) {

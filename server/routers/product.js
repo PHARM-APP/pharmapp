@@ -97,7 +97,6 @@ router.route("/:id").get((req, res) => {
     if (err) {
       console.error("Error retrieving all product by id!");
     } else {
-      console.log("server product = " + JSON.stringify(product));
       res.json(product);
     }
   });
