@@ -26,7 +26,7 @@ export class BillComponent implements OnInit {
     var tmpProducts = JSON.parse(localStorage.getItem('products'));
     var arrayOfPromises = [];
 
-    tmpProducts.forEach((item) => {
+    tmpProducts.forEach((item:any) => {
       arrayOfPromises.push(
         this.httpClient
           .get(`http://localhost:3000/api/product/${item.product}`)
@@ -35,7 +35,7 @@ export class BillComponent implements OnInit {
     });
     Promise.all(arrayOfPromises).then((result) => {
 
-      tmpProducts.forEach((item, index) => {
+      tmpProducts.forEach((item :any , index:any) => {
         item.product = result[index];
         this.total += item.product.price * item.quantity;
       });
@@ -49,7 +49,7 @@ export class BillComponent implements OnInit {
       'products',
       JSON.stringify(
 
-        JSON.parse(localStorage.getItem('products')).filter((item) => {
+        JSON.parse(localStorage.getItem('products')).filter((item:any) => {
           return item.product !== id;
         })
       )
@@ -63,7 +63,7 @@ export class BillComponent implements OnInit {
     this.total += Number(item.product.price);
     var products = JSON.parse(localStorage.getItem('products'));
 
-    products.forEach((product) => {
+    products.forEach((product:any) => {
       if (product.product === item.product._id) {
         product.quantity++;
       }
