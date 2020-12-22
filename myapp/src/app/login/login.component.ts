@@ -18,8 +18,9 @@ export class LoginComponent implements OnInit {
   }
 
   onlogin() {
+    console.log(this.username)
     if (this.username.length == 0) {
-      alert('email field can not be empty');
+      alert('username field can not be empty');
     } else if (this.password.length == 0) {
       alert('password can not be empty');
     } else {
