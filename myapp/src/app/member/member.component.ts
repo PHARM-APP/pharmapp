@@ -7,6 +7,8 @@ import {DetailsService} from '../services/details.service'
   styleUrls: ['./member.component.css']
 })
 export class MemberComponent implements OnInit {
+  name = ""
+  filter: any =[]
   myArray:any =[]
   isLoggedIn = false;
 
@@ -19,6 +21,7 @@ export class MemberComponent implements OnInit {
     this.service.getAllProducts().subscribe((response:any)=>{
       console.log(response)
       this.myArray=response
+      this.filter=response
     })
   }
   deleteProduct(id:number){
@@ -36,6 +39,14 @@ export class MemberComponent implements OnInit {
     this.isLoggedIn = false;
     localStorage['login_status']='0'
     this.router.navigate(['/login']);
+  }
+
+  onChange(event:any) {
+    this.filter = this.myArray.filter((item:any)=>{
+      if(item.name.includes(this.name)){
+        return item
+      }
+    })
   }
 
   ngOnInit(): void {

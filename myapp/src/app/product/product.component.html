@@ -22,10 +22,10 @@
                   <ul id="navigation">
                     <li><a  routerLink="/navbar">Home</a></li>
                     <li>
-                      <a routerLink="/product">Articles</a>
+                      <a routerLink="/product" >Articles</a>
                     </li>
 
-                    <li><a >statistics</a></li>
+                    <li><a routerLink="/chart">statistics</a></li>
                     <li>
                       <a >Add</a>
                       <ul class="submenu">
@@ -45,9 +45,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                <a href="#" class="btn header-btn">ADMIN</a>
-              </div>
+              
             </div>
           </div>
           <!-- Mobile Menu -->
@@ -194,32 +192,70 @@
 
 
 
-<div class="col-xl-8 col-lg-7">
-  <div class="card shadow mb-4">
-      <!-- Card Header - Dropdown -->
-      <div
-          class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-          <div class="dropdown no-arrow">
-              <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                  aria-labelledby="dropdownMenuLink">
-                  <div class="dropdown-header">Dropdown Header:</div>
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+<div class="row setup-content" id="ProfileSetup-step">
+  <div class="col-xs-12">
+      <div class="col-md-12">
+           <br/>
+          <div class="form-horizontal">
+              <form  role="form">
+                  <fieldset>
+                
+                    <legend>Enter Your Profile Information</legend>
+                    <br/>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="card-holder-name">Your Email</label>
+                      <div class="col-sm-9">
+                        <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Email"  />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="card-number">Name</label>
+                      <div class="col-sm-9">
+                       <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Name" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="card-number">Primary Phone Number</label>
+                      <div class="col-sm-9">
+                       <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Primary Phone Number" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="card-number">Address</label>
+                      <div class="col-sm-9">
+                       <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Address" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                         <div class="form-group">
+                              <label class="col-sm-6 control-label" for="card-number">City</label>
+                              <div class="col-sm-6" style="padding-left:8px">
+                               <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter City" />
+                              </div>
+                            </div>
+                    </div>
+                     <div class="col-lg-6">
+                         <div class="form-group">
+                              <label class="col-sm-6 control-label" for="card-number">State/Province</label>
+                              <div class="col-sm-6" style="padding:0px">
+                               <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter State/Province" />
+                              </div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="card-number">Country</label>
+                      <div class="col-sm-9">
+                       <select required="required" class="form-control" >
+                            <option value="0">Select Country</option>
+                           <option value="pakistan">Pakistan</option>
+                           <option value="usa">USA</option>
+                       </select>
+                      </div>
+                    </div>
+                  </fieldset>
+              </form>
           </div>
-      </div>
-      <!-- Card Body -->
-      <div class="card-body">
-          <div class="chart-area">
-              <canvas id="myAreaChart"></canvas>
-          </div>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Setup Profile</button>
       </div>
   </div>
 </div>

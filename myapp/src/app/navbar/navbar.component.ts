@@ -7,8 +7,10 @@ import {DetailsService} from '../services/details.service'
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  name = ""
   myArray:any =[]
   isLoggedIn = false;
+  filter: any =[]
 
   constructor(private router: Router,productService:DetailsService, private service:DetailsService) { 
     productService.getproduct().subscribe((res)=>{
@@ -19,6 +21,7 @@ export class NavbarComponent implements OnInit {
     this.service.getAllProducts().subscribe(response=>{
       console.log(response)
       this.myArray=response
+      this.filter=response
     })
   }
   deleteProduct(id:number){
@@ -37,6 +40,13 @@ export class NavbarComponent implements OnInit {
     this.isLoggedIn = false;
     localStorage['login_status']='0'
     this.router.navigate(['/login']);
+  }
+  onChange(event:any) {
+    this.filter = this.myArray.filter((item:any)=>{
+      if(item.name.includes(this.name)){
+        return item
+      }
+    })
   }
 
   ngOnInit(): void {

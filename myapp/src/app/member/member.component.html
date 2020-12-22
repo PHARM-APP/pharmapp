@@ -25,12 +25,16 @@
               <div class="main-menu f-right d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-                    <li><a  routerLink="/member">Home</a></li>
+                    <li><a routerLink="/member">Home</a></li>
                     <li>
                       <a href="article.html" routerLink="/product">Articles</a>
                     </li>
 
-                    <li><a href="statistics.html">statistics</a></li>
+                    <li>
+                      <a href="statistics.html" routerLink="/chart"
+                        >statistics</a
+                      >
+                    </li>
                     <li>
                       <a href="add.html">Add</a>
                       <ul class="submenu">
@@ -46,10 +50,11 @@
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                <a  class="btn header-btn" (click)="onlogout()">log Out</a>
+                <a class="btn header-btn" (click)="onlogout()">log Out</a>
               </div>
             </div>
           </div>
+
           <!-- Mobile Menu -->
           <div class="col-12">
             <div class="mobile_menu d-block d-lg-none"></div>
@@ -57,6 +62,19 @@
         </div>
       </div>
     </div>
+  
+    <div class="container">
+      <input
+        [(ngModel)]="name"
+        class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2"
+        class="form-control form-control-sm mr-3 w-75"
+        type="text"
+        placeholder="Type something to search list products"
+        aria-label="Search"
+        (ngModelChange)="onChange($event)"
+      />
+    </div>
+  
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -75,7 +93,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of myArray">
+              <tr *ngFor="let item of filter">
                 <td>
                   <img
                     src="assets/uploads/products/{{ item.image }}"
@@ -109,8 +127,3 @@
   </div>
   <!-- Header End -->
 </header>
-    <!-- <div class="slider-area position-relative">
-      <div class="slider-active">
-       
-      </div>
-    </div> -->
