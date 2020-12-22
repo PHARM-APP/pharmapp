@@ -62,12 +62,15 @@ export class DetailsproductsComponent implements OnInit {
     //console.log(item);
 
     var product = {
-      id: '',
       product: item._id,
-      quantity: '1',
-      name: item.name,
+      quantity: 1,
       price: item.price,
     };
+
+    var newProducts = JSON.parse(localStorage.getItem('products')) || [];
+    console.log(newProducts);
+    newProducts.push(product);
+    localStorage.setItem('products', JSON.stringify(newProducts));
 
     if (localStorage.getItem('bill_id') === null) {
       this.bill.order = [];
@@ -120,6 +123,7 @@ export class DetailsproductsComponent implements OnInit {
         return item;
       }
     });
+
   }
 
   ngOnInit(): void {}
