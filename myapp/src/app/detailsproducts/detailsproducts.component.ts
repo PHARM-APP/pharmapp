@@ -10,6 +10,7 @@ import { bill } from '../models/bill';
 })
 export class DetailsproductsComponent implements OnInit {
   myArray: any = [];
+
   filter: any = [];
     name = '';
 

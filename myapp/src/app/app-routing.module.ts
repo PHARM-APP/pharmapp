@@ -10,11 +10,11 @@ import {DetailsproductsComponent } from './detailsproducts/detailsproducts.compo
 import {ChartComponent} from './chart/chart.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { BillComponent } from './bill/bill.component';
-
-
+import { MemberComponent } from './member/member.component';
 
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
+
 
   {path:'login' , component:LoginComponent},
   {path:'custumer', component:CustumerComponent},
@@ -33,7 +33,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule],
 })
-
 
 
 export class AppRoutingModule { }

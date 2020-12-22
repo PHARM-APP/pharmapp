@@ -11,9 +11,6 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { BillComponent } from './bill/bill.component';
 import { ChartComponent } from './chart/chart.component';
 
-// import { DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
-// import { DetailsprodComponent } from './services/detailsprod/detailsprod.component';
-// import { Detailsprod } from './services/detailsprod.ts/detailsprod.ts.component';
 @NgModule({
   declarations: [
     AppComponent,

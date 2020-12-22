@@ -28,7 +28,9 @@ export class ProductComponent implements OnInit {
     // console.log(event.target.files[0])
     // this.image=event.target.files[0].name
 
+
     const file = event.target.files[0];
+
     this.image = file;
     // this.image=event.target.name
   }
