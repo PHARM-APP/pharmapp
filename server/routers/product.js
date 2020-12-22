@@ -62,7 +62,8 @@ router.post("/", upload.single("file"), (req, res, next) => {
     image: name_file,
     description: req.body.description
   });
-  product.save()
+  product
+    .save()
     .then((result) => {
       console.log(result);
       res.status(201).json({
@@ -120,7 +121,5 @@ router.route("/:id").delete((req, res) => {
     res.send(data);
   });
 });
-
-
 
 module.exports = router;

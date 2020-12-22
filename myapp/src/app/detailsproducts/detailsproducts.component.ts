@@ -55,7 +55,6 @@ export class DetailsproductsComponent implements OnInit {
       }
     });
   }
-  
 
   ngOnInit(): void {}
 }

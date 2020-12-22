@@ -7,7 +7,7 @@ import { Product } from '../models/product';
 export class ProductsService {
   http: HttpClient;
   urlApi = 'http://localhost:3000/api/product/';
-  url='http://localhost:3000/api/product/search'
+  url = 'http://localhost:3000/api/product/search';
   constructor(private httpClient: HttpClient) {
     this.http = httpClient;
   }
@@ -33,7 +33,4 @@ export class ProductsService {
 
     return this.http.post(this.urlApi, body);
   }
-
-
-
 }
