@@ -1,11 +1,18 @@
 var mongoose = require("mongoose");
 const custumerSchema = new mongoose.Schema({
-  id: String,
-  name: String,
+  id:{ type: String,
+    required: true,
+    unique: true},
+  name: { type: String,
+    required: true},
   genre: String,
   date: String,
-  phone: Number,
-  email: String,
+  phone:{ type: Number,
+    required: true,
+    unique: true},
+  email: { type: String,
+    required: true,
+    unique: true},
   points: Number
 });
 var CusModel = mongoose.model("custumer", custumerSchema);

@@ -1,59 +1,88 @@
-<h1>Add Product </h1>
+<h1>Add Product</h1>
 <form>
   <div class="form-group">
     <label for="one1">id : </label>
-    <input [(ngModel)]="id"  type="text" id="one1" name="id" placeholder="Enter id ... ">
-  
+    <input
+      [(ngModel)]="id"
+      type="text"
+      id="one1"
+      name="id"
+      placeholder="Enter id ... "
+    />
   </div>
-<div class="form-group">
-  <label for="one">Name : </label>
-  <input [(ngModel)]="name" type="text" id="one" name="name" placeholder="Enter name ... ">
+  <div class="form-group">
+    <label for="one">Name : </label>
+    <input
+      [(ngModel)]="name"
+      type="text"
+      id="one"
+      name="name"
+      placeholder="Enter name ... "
+    />
+  </div>
+  <div class="form-group">
+    <label for="two"> Price : </label>
+    <input
+      [(ngModel)]="price"
+      type="text"
+      id="two"
+      name="price"
+      placeholder="Enter Price ... "
+    />
+  </div>
+  <div class="form-group">
+    <label for="three"> Discount : </label>
+    <input
+      [(ngModel)]="discount"
+      type="text"
+      id="three"
+      name="discount"
+      placeholder="Enter the discount ... "
+    />
+  </div>
 
-</div>
-<div class="form-group">
-  <label for="two"> Price : </label>
-  <input [(ngModel)]="price" type="text" id="two" name="price" placeholder="Enter Price ... ">
+  <div class="form-group">
+    <label for="five">DoesInMG : </label>
+    <input
+      [(ngModel)]="DoesInMG"
+      type="text"
+      id="five"
+      name="DoesInMG"
+      placeholder="  ... "
+    />
+  </div>
+  <div class="form-group">
+    <label for="four">Quantity : </label>
+    <input
+      [(ngModel)]="quantity"
+      type="tel"
+      id="four"
+      name="quantity"
+      placeholder="quantity ... "
+    />
+  </div>
+  <div class="form-group">
+    <label for="six">Add image : </label>
+    <input
+      (change)="onSelectImage($event)"
+      type="file"
+      id="six"
+      name="image"
+      placeholder="image ... "
+    />
+  </div>
 
-</div>
-<div class="form-group">
-  <label for="three"> Discount  :   </label>
-  <input [(ngModel)]="discount" type="text" id="three" name="discount" placeholder="Enter the discount ... ">
-
-</div>
-<div class="form-group">
-  <label for="four">Price with Discount : </label>
-  <input [(ngModel)]="PricewithDiscount" type='text' id="four" name="price" placeholder=" ... ">
-
-</div>
-<div class="form-group">
-  <label for="five">DoesInMG : </label>
-  <input [(ngModel)]="DoesInMG" type="text" id="five" name="doseInMG" placeholder="  ... ">
-</div>
-    <div class="form-group">
-      <label for="four">Quantity : </label>
-      <input [(ngModel)]="quantity" type='tel' id="four" name="quantity" placeholder="quantity ... ">
-    
-    </div>
-<div class="form-group">
-  <label for="six">Add image : </label>
-  <input (change)="onSelectImage($event)" type="file" id="six" name="image" placeholder="image ... ">
-
-</div>
-<!-- <div class="form-group">
-  <label for="six">Category : </label>
-  <select  [(ngModel)]="myProduct.categoryid" >
-      <option *ngFor='let c of cat' [value]="c.id">{{c.title}}</option>
-      </select>
-</div> -->
-<div class="form-group">
-  <label for="six">Description : </label>
-  <input [(ngModel)]="description" type="text" id="six" name="description" placeholder="description... ">
-
-</div><br />
-<button  (click)="addProduct()" class='btn'   type="button"> Add</button>
-
-</form> 
+  <div class="form-group">
+    <label for="six">Description : </label>
+    <input
+      [(ngModel)]="description"
+      type="text"
+      id="six"
+      name="description"
+      placeholder="description... "
+    />
+  </div>
+  <br />
+  <button (click)="addProduct()" class="btn" type="button">Add</button>
+</form>
 <br />
-
-
-  

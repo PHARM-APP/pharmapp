@@ -9,6 +9,10 @@ import { MemberComponent } from './member/member.component';
 import { RegisterComponent } from './register/register.component';
 import {DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
 
+import { FirstPageComponent } from './first-page/first-page.component';
+import { BillComponent } from './bill/bill.component';
+
+
 
 const routes: Routes = [
   // { path: '/',redirectTo: '/login' },
@@ -20,12 +24,8 @@ const routes: Routes = [
   {path: 'member', component:MemberComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'allproducts', component:DetailsproductsComponent},
-
-
-
-
-
-
+  {path: 'bill', component:BillComponent},
+  { path: '', component: FirstPageComponent },
 ];
 
 @NgModule({
@@ -34,8 +34,13 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 
+
+
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent]
+export const routingComponents = [LoginComponent,CustumerComponent,ProductComponent,MemberComponent,NavbarComponent,RegisterComponent,DetailsproductsComponent, FirstPageComponent,
+]
+
+
 
 
 
