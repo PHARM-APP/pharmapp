@@ -6,7 +6,8 @@ const BillSchema = mongoose.Schema({
     {
       product: { type: mongoose.Schema.Types.ObjectId, ref: "product" },
       quantity: Number,
-      name: String
+      name: String,
+      price: Number
     }
   ],
   total: Number

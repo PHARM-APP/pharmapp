@@ -4,22 +4,18 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
- 
   isLoggedIn = false;
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router) {}
 
   onlogout() {
     this.isLoggedIn = false;
-    localStorage['login_status']='0'
+    localStorage['login_status'] = '0';
     this.router.navigate(['/login']);
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

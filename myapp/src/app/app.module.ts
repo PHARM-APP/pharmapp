@@ -8,6 +8,7 @@ import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FirstPageComponent } from './first-page/first-page.component';
+import { BillComponent } from './bill/bill.component';
 import { ChartComponent } from './chart/chart.component';
 
 // import { DetailsproductsComponent } from './detailsproducts/detailsproducts.component';
@@ -17,7 +18,11 @@ import { ChartComponent } from './chart/chart.component';
   declarations: [
     AppComponent,
     routingComponents,
-    ChartComponent,
+    
+   
+
+    // DetailsproductsComponent,
+
     // DetailsprodComponent,
     // Detailsprod.TsComponent
   ],
