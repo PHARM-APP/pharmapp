@@ -48,6 +48,16 @@ export class ProductComponent implements OnInit {
       )
       .subscribe((res) => {
         console.log(' product added');
+        this.videInput()
       });
+  }
+  videInput() {
+        this.id=''
+        this.name=''
+        this.price=''
+        this.discount=''
+        this.DoesInMG=''
+        this.quantity=''
+        this.image=''
   }
 }

@@ -1,4 +1,70 @@
-<table class="table table-success">
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+
+<div class="header-area">
+  <div class="main-header header-sticky">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <!-- Logo -->
+        <div class="col-xl-2 col-lg-2 col-md-1">
+          <div class="logo">
+            <a routerLink="/index"
+              ><img src="../../assets/assets/img/logo/logo.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="col-xl-10 col-lg-10 col-md-10">
+          <div class="menu-main d-flex align-items-center justify-content-end">
+            <!-- Main-menu -->
+            <div class="main-menu f-right d-none d-lg-block">
+              <nav>
+                <ul id="navigation">
+                  <li><a href="index.html" routerLink="/navbar">Home</a></li>
+                  <li>
+                    <a href="article.html" routerLink="/product">Articles</a>
+                  </li>
+
+                  <li>
+                    <a href="statistics.html" routerLink="/chart">statistics</a>
+                  </li>
+                  <li>
+                    <a href="add.html">Add</a>
+                    <ul class="submenu">
+                      <li>
+                        <a href="addmembers.html" routerLink="/register"
+                          >Add members</a
+                        >
+                      </li>
+                      <li>
+                        <a href="addcusstumers.html" routerLink="/custumer"
+                          >Add custumers</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="bill.html">Bill</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <!-- <div class="col-12">
+          <div class="mobile_menu d-block d-lg-none"></div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- <table class="table table-success">
   <thead>
     <tr>
       <th>id</th>
@@ -22,4 +88,54 @@
 
     <tr></tr>
   </tbody>
+</table> -->
+
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">BILL</h3>
+    </div>
+  </div>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <!-- <th>id</th> -->
+      <th>product name</th>
+      <th>quantity</th>
+      <th>price</th>
+      <th>total</th>
+      <th>delete</th>
+      <th>edit</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
+    <tr *ngFor="let item of billProducts">
+      <!-- <td>{{ item.product._id }}</td> -->
+      <td>{{ item.product.name }}</td>
+      <td (click)="count(item)">{{ item.quantity }}</td>
+      <td>{{ item.product.price }}</td>
+      <td>{{ item.product.price * item.quantity }}</td>
+      <td> 
+        <a href="#" class="btn btn-primary a-btn-slide-text">
+          <span
+            class="glyphicon glyphicon-remove"
+            aria-hidden="true"
+            (click)="deleteProductFromBill(item.product._id)"
+          ></span>
+          <span><strong></strong></span>
+        </a>
+      </td>
+      <td>
+        <a href="#" class="btn btn-primary a-btn-slide-text">
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          <span><strong></strong></span>            
+      </a>
+      </td>
+     
+    </tr>
+    <tr><h2>TOTAL: {{total}}</h2></tr>
+  </tbody>
 </table>
+</div>
+</div>

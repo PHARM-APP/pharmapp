@@ -50,14 +50,12 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a href="bill.html">Bill</a></li>
+                    <li><a routerLink="/bill">Bill</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-
                 <a class="btn header-btn" (click)="onlogout()">Log Out</a>
-
               </div>
             </div>
           </div>
@@ -68,7 +66,6 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <input
         [(ngModel)]="name"
@@ -94,7 +91,7 @@
                 <th scope="col">DoesInMG</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Description</th>
-
+                <th scope="col">Add to bill</th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
@@ -114,6 +111,11 @@
                 <td>{{ item.quantity }}</td>
                 <td>{{ item.description }}</td>
 
+                <td><a href="#" class="btn btn-primary a-btn-slide-text">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"
+                  (click)="addtocart(item)"></span>
+                  <span><strong>Add</strong></span>            
+                </a></td>
                 <td>
                   <a href="#" class="btn btn-primary a-btn-slide-text">
                     <span
@@ -128,17 +130,6 @@
             </tbody>
           </table>
         </div>
-
-
-    <div class="slider-area position-relative">
-      <div class="slider-active">
-        <!-- Single Slider -->
-        <!-- <div class="single-slider slider-height d-flex align-items-center">
-         
-          
-        </div> -->
-        <!-- Single Slider -->
-
       </div>
     </div>
   </div>

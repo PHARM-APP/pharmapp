@@ -41,23 +41,7 @@ export class DetailsproductsComponent implements OnInit {
     });
     this.loadAllProducts();
   }
-  loadAllProducts() {
-    this.service.getAllProducts().subscribe((response) => {
-      console.log(response);
-      this.myArray = response;
-    });
-  }
-  deleteProduct(id: number) {
-    console.log(id);
 
-    this.service
-      .delete(id)
-
-      .subscribe(() => {
-        // return this.myArray=this.myArray.filter((item:any)=>item.id !== id)
-        return this.loadAllProducts();
-      });
-  }
 
   addtocart(item: any) {
     //console.log(item);
@@ -90,15 +74,7 @@ export class DetailsproductsComponent implements OnInit {
   }
   loadAllProducts() {
     this.service.getAllProducts().subscribe((response: any) => {
-      // if(this.mycondition){
-      //   for(var i=0;i<response.length;i++){
-      //     if(response[i].name==name){
-      //       this.myArray.push(response[i])
-      //       console.log(this.myArray)
-
-      //     }
-      //   }
-      // }
+   
       console.log(response);
       this.myArray = response;
       this.filter = response;
