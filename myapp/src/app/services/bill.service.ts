@@ -20,6 +20,7 @@ export class BillService {
     return this.http.post<bill>(this.urlApi, bill);
   }
   updateitem(bill: any) {
+
     return this.http.put(`${this.urlApi}`, bill);
   }
 

@@ -44,15 +44,14 @@ router.route("/:id").delete((req, res) => {
 });
 
 
+
 router.route("/").put(function (req, res) {
-  console.log(req.body);
-  updatebill(req.body, function (err, data) {
+  updatebill(req.body, (err, data) => {
     if (err) {
-      console.log(err);
-      res.send("hello oussema");
-    } else {
-      res.send(data);
+      throw err;
     }
+    res.send(data);
+
 
   });
 });

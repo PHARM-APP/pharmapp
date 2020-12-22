@@ -25,8 +25,6 @@
               <div class="main-menu f-right d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-
-
                     <li>
                       <a href="article.html" routerLink="/product">Articles</a>
                     </li>
@@ -46,14 +44,12 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a href="bill.html">Bill</a></li>
+                    <li><a routerLink="/bill">Bill</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="header-right-btn f-right d-none d-lg-block ml-30">
-
                 <a class="btn header-btn" (click)="onlogout()">log Out</a>
-
               </div>
             </div>
           </div>
@@ -65,7 +61,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="container">
       <input
         [(ngModel)]="name"
@@ -77,7 +73,7 @@
         (ngModelChange)="onChange($event)"
       />
     </div>
-  
+
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -91,7 +87,8 @@
                 <th scope="col">DoesInMG</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Description</th>
-
+                <th scope="col">Add to bill</th>
+                <th></th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
@@ -112,14 +109,25 @@
                 <td>{{ item.description }}</td>
 
                 <td>
-                  <a href="#" class="btn btn-primary a-btn-slide-text">
+                  <button class="btn btn-primary a-btn-slide-text">
+                    <span
+                      class="glyphicon glyphicon-plus"
+                      aria-hidden="true"
+                      (click)="addtocart(item)"
+                    ></span>
+                    <span><strong>Add</strong></span>
+                  </button>
+                </td>
+                <td></td>
+                <td>
+                  <button class="btn btn-primary a-btn-slide-text">
                     <span
                       class="glyphicon glyphicon-remove"
                       aria-hidden="true"
                       (click)="deleteProduct(item._id)"
                     ></span>
                     <span><strong></strong></span>
-                  </a>
+                  </button>
                 </td>
               </tr>
             </tbody>
