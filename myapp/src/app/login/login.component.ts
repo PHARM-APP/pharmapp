@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-
   // onlogout() {
   //   this.isLoggedIn = false;
   //   localStorage['login_status']='0'

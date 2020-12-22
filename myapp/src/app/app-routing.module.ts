@@ -44,5 +44,4 @@ export const routingComponents = [
   RegisterComponent,
   DetailsproductsComponent,
   FirstPageComponent,
-  
 ];

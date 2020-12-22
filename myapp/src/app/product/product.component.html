@@ -20,32 +20,27 @@
               <div class="main-menu f-right d-none d-lg-block">
                 <nav>
                   <ul id="navigation">
-                    <li><a  routerLink="/navbar">Home</a></li>
+                    <li><a routerLink="/navbar">Home</a></li>
                     <li>
-                      <a routerLink="/product" >Articles</a>
+                      <a routerLink="/product">Articles</a>
                     </li>
 
                     <li><a routerLink="/chart">statistics</a></li>
                     <li>
-                      <a >Add</a>
+                      <a>Add</a>
                       <ul class="submenu">
                         <li>
-                          <a  routerLink="/register"
-                            >Add members</a
-                          >
+                          <a routerLink="/register">Add members</a>
                         </li>
                         <li>
-                          <a routerLink="/custumer"
-                            >Add custumers</a
-                          >
+                          <a routerLink="/custumer">Add custumers</a>
                         </li>
                       </ul>
                     </li>
-                    <li><a >Bill</a></li>
+                    <li><a>Bill</a></li>
                   </ul>
                 </nav>
               </div>
-              
             </div>
           </div>
           <!-- Mobile Menu -->
@@ -190,72 +185,121 @@
 </div>
 <br />
 
-
-
 <div class="row setup-content" id="ProfileSetup-step">
   <div class="col-xs-12">
-      <div class="col-md-12">
-           <br/>
-          <div class="form-horizontal">
-              <form  role="form">
-                  <fieldset>
-                
-                    <legend>Enter Your Profile Information</legend>
-                    <br/>
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label" for="card-holder-name">Your Email</label>
-                      <div class="col-sm-9">
-                        <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Email"  />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label" for="card-number">Name</label>
-                      <div class="col-sm-9">
-                       <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Name" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label" for="card-number">Primary Phone Number</label>
-                      <div class="col-sm-9">
-                       <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Primary Phone Number" />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label" for="card-number">Address</label>
-                      <div class="col-sm-9">
-                       <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Address" />
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                         <div class="form-group">
-                              <label class="col-sm-6 control-label" for="card-number">City</label>
-                              <div class="col-sm-6" style="padding-left:8px">
-                               <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter City" />
-                              </div>
-                            </div>
-                    </div>
-                     <div class="col-lg-6">
-                         <div class="form-group">
-                              <label class="col-sm-6 control-label" for="card-number">State/Province</label>
-                              <div class="col-sm-6" style="padding:0px">
-                               <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter State/Province" />
-                              </div>
-                            </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label" for="card-number">Country</label>
-                      <div class="col-sm-9">
-                       <select required="required" class="form-control" >
-                            <option value="0">Select Country</option>
-                           <option value="pakistan">Pakistan</option>
-                           <option value="usa">USA</option>
-                       </select>
-                      </div>
-                    </div>
-                  </fieldset>
-              </form>
-          </div>
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Setup Profile</button>
+    <div class="col-md-12">
+      <br />
+      <div class="form-horizontal">
+        <form role="form">
+          <fieldset>
+            <legend>Enter Your Profile Information</legend>
+            <br />
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-holder-name"
+                >Your Email</label
+              >
+              <div class="col-sm-9">
+                <input
+                  maxlength="100"
+                  type="text"
+                  required="required"
+                  class="form-control"
+                  placeholder="Enter Email"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-number"
+                >Name</label
+              >
+              <div class="col-sm-9">
+                <input
+                  maxlength="100"
+                  type="text"
+                  required="required"
+                  class="form-control"
+                  placeholder="Enter Name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-number"
+                >Primary Phone Number</label
+              >
+              <div class="col-sm-9">
+                <input
+                  maxlength="100"
+                  type="text"
+                  required="required"
+                  class="form-control"
+                  placeholder="Enter Primary Phone Number"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-number"
+                >Address</label
+              >
+              <div class="col-sm-9">
+                <input
+                  maxlength="100"
+                  type="text"
+                  required="required"
+                  class="form-control"
+                  placeholder="Enter Address"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="col-sm-6 control-label" for="card-number"
+                  >City</label
+                >
+                <div class="col-sm-6" style="padding-left: 8px">
+                  <input
+                    maxlength="100"
+                    type="text"
+                    required="required"
+                    class="form-control"
+                    placeholder="Enter City"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="col-sm-6 control-label" for="card-number"
+                  >State/Province</label
+                >
+                <div class="col-sm-6" style="padding: 0px">
+                  <input
+                    maxlength="100"
+                    type="text"
+                    required="required"
+                    class="form-control"
+                    placeholder="Enter State/Province"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="card-number"
+                >Country</label
+              >
+              <div class="col-sm-9">
+                <select required="required" class="form-control">
+                  <option value="0">Select Country</option>
+                  <option value="pakistan">Pakistan</option>
+                  <option value="usa">USA</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
+      <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">
+        Setup Profile
+      </button>
+    </div>
   </div>
 </div>
