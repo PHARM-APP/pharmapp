@@ -1,3 +1,13 @@
+<div class="input-group">
+  <input
+    [(ngModel)]="name"
+    type="text"
+    class="form-control"
+    (ngModelChange)="onChange($event)"
+    placeholder="product name"
+  />
+</div>
+
 <table class="table table-success">
   <thead>
     <tr>
@@ -15,7 +25,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of myArray">
+    <tr *ngFor="let item of filter">
       <td>{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.price }}</td>
@@ -36,6 +46,10 @@
       <!-- <td>
          <button (click)="editProduct(item)">Update</button>
          </td>  -->
+
+      <td>
+        <button (click)="addtocart(item)">addtocart</button>
+      </td>
     </tr>
 
     <tr></tr>

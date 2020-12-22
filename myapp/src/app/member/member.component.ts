@@ -7,6 +7,7 @@ import { DetailsService } from '../services/details.service';
   styleUrls: ['./member.component.css'],
 })
 export class MemberComponent implements OnInit {
+
   name = '';
   filter: any = [];
   myArray: any = [];
@@ -40,11 +41,13 @@ export class MemberComponent implements OnInit {
         return this.loadAllProducts();
       });
   }
+
   onlogout() {
     this.isLoggedIn = false;
     localStorage['login_status'] = '0';
     this.router.navigate(['/login']);
   }
+
 
   onChange(event: any) {
     this.filter = this.myArray.filter((item: any) => {
@@ -53,6 +56,7 @@ export class MemberComponent implements OnInit {
       }
     });
   }
+
 
   ngOnInit(): void {}
 }

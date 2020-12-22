@@ -1,0 +1,25 @@
+<table class="table table-success">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>product name</th>
+      <th>quantity</th>
+      <th>price</th>
+      <th>total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of myArray">
+      <td>{{ item.id }}</td>
+      <td>{{ item.order[0].name }}</td>
+      <td (click)="count(item)">{{ item.order[0].quantity }}</td>
+      <td>{{ item.order[0].price }}</td>
+      <td>{{ item.order[0].price * item.order[0].quantity }}</td>
+      <td>
+        <button (click)="deletebill(item._id)">delete</button>
+      </td>
+    </tr>
+
+    <tr></tr>
+  </tbody>
+</table>

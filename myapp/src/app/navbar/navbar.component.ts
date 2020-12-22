@@ -8,10 +8,13 @@ import { DetailsService } from '../services/details.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+
   name = '';
   myArray: any = [];
+
   isLoggedIn = false;
   filter: any = [];
+
 
   constructor(
     private router: Router,
@@ -42,11 +45,13 @@ export class NavbarComponent implements OnInit {
       });
   }
 
+
   onlogout() {
     this.isLoggedIn = false;
     localStorage['login_status'] = '0';
     this.router.navigate(['/login']);
   }
+
   onChange(event: any) {
     this.filter = this.myArray.filter((item: any) => {
       if (item.name.includes(this.name)) {
@@ -54,6 +59,7 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+
 
   ngOnInit(): void {}
 }
