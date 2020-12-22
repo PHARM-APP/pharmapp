@@ -120,4 +120,5 @@ router.route("/:id").delete((req, res) => {
     res.send(data);
   });
 });
+
 module.exports = router;
