@@ -60,29 +60,15 @@ export class DetailsproductsComponent implements OnInit {
     //console.log(item);
 
     var product = {
-      id: '',
       product: item._id,
-      quantity: '1',
-      name: item.name,
+      quantity: 1,
       price: item.price,
     };
 
-    if (localStorage.getItem('bill_id') === null) {
-      this.bill.order = [];
-      this.bill.order.push(product);
-      this.bill.custumer = localStorage.getItem('_id');
-
-      this.billservice.postitem(this.bill).subscribe((res) => {
-        console.log(res);
-      });
-
-      //localStorage.setItem('bill_id', bill_id);
-    } else {
-      this.bill.custumer = localStorage.getItem('_id');
-      this.bill.order.push(product);
-
-      var bill_id = this.billservice.addproducttocart(this.bill);
-    }
+    var newProducts = JSON.parse(localStorage.getItem('products')) || [];
+    console.log(newProducts);
+    newProducts.push(product);
+    localStorage.setItem('products', JSON.stringify(newProducts));
   }
 
   ngOnInit(): void {}
