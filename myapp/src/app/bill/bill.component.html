@@ -75,14 +75,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of myArray">
-      <td>{{ item.id }}</td>
-      <td>{{ item.order[0].name }}</td>
-      <td (click)="count(item)">{{ item.order[0].quantity }}</td>
-      <td>{{ item.order[0].price }}</td>
-      <td>{{ item.order[0].price * item.order[0].quantity }}</td>
+    <tr *ngFor="let item of billProducts">
+      <td>{{ item.product._id }}</td>
+      <td>{{ item.product.name }}</td>
+      <td (click)="count(item)">{{ item.quantity }}</td>
+      <td>{{ item.product.price }}</td>
+      <td>{{ item.product.price * item.quantity }}</td>
       <td>
-        <button (click)="deletebill(item._id)">delete</button>
+        <button (click)="deleteProductFromBill(item.product._id)">
+          delete
+        </button>
+      </td>
+      <td>
+        <button (click)="update(item)">update</button>
       </td>
     </tr>
 
@@ -139,3 +144,5 @@
 </table>
 </div>
 </div>
+<h3>total: {{ total }}</h3>
+

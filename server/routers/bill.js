@@ -42,12 +42,17 @@ router.route("/:id").delete((req, res) => {
     res.send(data);
   });
 });
+
+
+
 router.route("/").put(function (req, res) {
   updatebill(req.body, (err, data) => {
     if (err) {
       throw err;
     }
     res.send(data);
+
+
   });
 });
 
